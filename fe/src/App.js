@@ -13,6 +13,9 @@ class App extends Component {
     return (
       <div data-testid="App" className="App">
         <Signup />
+        {this.state.response !== undefined
+          && <p>placeholder</p>
+        }
       </div>
     );
   }
