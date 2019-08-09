@@ -9,10 +9,18 @@ class App extends Component {
     response: undefined,
   };
 
+  setToken = (token) => {
+    this.setState({
+      ...this.state,
+      token,
+  });
+  }
+
   render() {
+    console.log(this.state.token);
     return (
       <div data-testid="App" className="App">
-        <Signup />
+        <Signup setToken={this.setToken}/>
         {this.state.response !== undefined
           && <p>placeholder</p>
         }
